@@ -4,17 +4,20 @@
 #include <stdlib.h>
 #include <string>
 #include <locale>
+#include <cstdlib>
 
 #include "ArrayUtils.h"
 
-#include "Lab1.h" // ✔
-#include "Lab2.h" // ✔
-#include "Lab3.h" // ✔
-#include "Lab4.h" // ✔
-#include "Lab5.h" // ✔
-#include "Lab6.h" // ✔
-#include "Lab7.h" // 
-#include "Lab8.h" // 
+#include "Lab1.h"	// ✔
+#include "Lab2.h"	// ✔
+#include "Lab3.h"	// ✔
+#include "Lab4.h"	// ✔
+#include "Lab5.h"	// ✔
+#include "Lab6.h"	// ✔
+#include "Lab7.h"	// 
+#include "Lab8.h"	// 
+
+#include "Lab10.h"	// 
 
 using namespace std;
 
@@ -24,10 +27,11 @@ using namespace std;
 
 void lab7();
 void lab8();
+void lab10();
 
-void main() {
+int main() {
 	setlocale(LC_ALL, "Rus");
-	lab8();
+	lab10();
 }
 
 void lab7() {
@@ -100,4 +104,8 @@ void lab8() {
 	printSchoolData(schools, sn);
 	cout << "-----------" << endl << endl;
 	printRoomData(rooms, rn);
+}
+
+void lab10() {
+	sortWordFile();
 }

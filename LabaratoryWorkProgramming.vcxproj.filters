@@ -66,6 +66,9 @@
     <ClCompile Include="Room.h">
       <Filter>Файлы заголовков\Data</Filter>
     </ClCompile>
+    <ClCompile Include="Lab10.cpp">
+      <Filter>Исходные файлы\Labs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1.h">
@@ -100,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="School.h">
       <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab10.h">
+      <Filter>Файлы заголовков\Labs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

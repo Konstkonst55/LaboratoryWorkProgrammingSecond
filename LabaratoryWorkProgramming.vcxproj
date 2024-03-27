@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrayUtils.c" />
+    <ClCompile Include="Lab10.cpp" />
     <ClCompile Include="Lab7.c" />
     <ClCompile Include="Lab1.c" />
     <ClCompile Include="Lab2.c" />
@@ -35,6 +36,7 @@
   <ItemGroup>
     <ClInclude Include="ArrayUtils.h" />
     <ClInclude Include="Lab1.h" />
+    <ClInclude Include="Lab10.h" />
     <ClInclude Include="Lab2.h" />
     <ClInclude Include="Lab3.h" />
     <ClInclude Include="Lab4.h" />
