@@ -17,7 +17,6 @@ int binarySearch(int arr[], int len, int key, int* c);
 int enumSearch(int arr[], int len, int key, int* c);
 void shellSortKnutDec(int arr[], int len, int* m, int* c);
 
-
 void printIntMatrix(int** arr, int rows, int cols);
 void fillRandIntMatrix(int** arr, int rows, int cols, int min, int max);
 

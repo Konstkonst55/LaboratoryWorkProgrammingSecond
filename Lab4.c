@@ -1,8 +1,4 @@
 #include "Lab4.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include "ArrayUtils.h"
-#include <stdbool.h>
 
 void fillMatrixAndDeleteMax(const int m, const int n)
 {

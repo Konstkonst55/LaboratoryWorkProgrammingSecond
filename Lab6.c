@@ -1,6 +1,4 @@
 #include "Lab6.h"
-#include "MathUtils.h"
-#include <math.h>
 
 int calculateTriangleProperties(float a, float b, float c, float* perimeter, float* area) {
     if (a + b < c || a + c < b || b + c < a) return 0;

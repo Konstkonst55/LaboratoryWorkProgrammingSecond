@@ -1,6 +1,4 @@
-
-#include <stdio.h>
-#include <stdlib.h>
+#include "Lab2.h"
 
 /// <summary>
 /// Печатает положительные числа из вводимой последовательности
@@ -50,8 +48,8 @@ char* convertToBinary(int num) {
     }
 
     char* temp = convertToBinary(num / 2);
-    strcpy(binary, temp);
-    strcat(binary, (num % 2 == 0 ? "0" : "1"));
+    strcpy_s(binary, temp);
+    strcat_s(binary, (num % 2 == 0 ? "0" : "1"));
 
     return binary;
 }

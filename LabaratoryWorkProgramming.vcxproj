@@ -27,6 +27,7 @@
     <ClCompile Include="Lab4.c" />
     <ClCompile Include="Lab5.c" />
     <ClCompile Include="Lab6.c" />
+    <ClCompile Include="Lab8.cpp" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="MathUtils.c" />
   </ItemGroup>
@@ -39,6 +40,7 @@
     <ClInclude Include="Lab5.h" />
     <ClInclude Include="Lab6.h" />
     <ClInclude Include="Lab7.h" />
+    <ClInclude Include="Lab8.h" />
     <ClInclude Include="MathUtils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -128,6 +130,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

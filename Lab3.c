@@ -1,8 +1,4 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-#include "ArrayUtils.h"
-#include <stdbool.h>
+#include "Lab3.h"
 
 void fillDynamicArray(int n) {
 	int* arr = (int*)malloc(n * sizeof(int));
@@ -66,7 +62,7 @@ void sortPPArray(int n) {
 }
 
 void printPrimeNumbers(int n) {
-    bool* prime = malloc(n * sizeof(bool));
+    bool* prime = (bool*)malloc(n * sizeof(bool));
 
     if (prime == NULL) {
         free(prime);

@@ -1,7 +1,4 @@
 #include "Lab5.h"
-#include "ArrayUtils.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void fillKMatrixFromVector(int m, int k) {
     int* srcArr = (int*)malloc(m * sizeof(int));

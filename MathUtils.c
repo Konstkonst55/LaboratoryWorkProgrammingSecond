@@ -1,5 +1,4 @@
-
-#include <math.h>
+#include "MathUtils.h"
 
 int getRandomInt(int min, int max) {
 	return min + rand() % (max - min + 1);

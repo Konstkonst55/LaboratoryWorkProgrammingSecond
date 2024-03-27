@@ -57,6 +57,9 @@
     <ClCompile Include="Lab7.c">
       <Filter>Исходные файлы\Labs</Filter>
     </ClCompile>
+    <ClCompile Include="Lab8.cpp">
+      <Filter>Исходные файлы\Labs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1.h">
@@ -84,6 +87,9 @@
       <Filter>Файлы заголовков\Labs</Filter>
     </ClInclude>
     <ClInclude Include="Lab7.h">
+      <Filter>Файлы заголовков\Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab8.h">
       <Filter>Файлы заголовков\Labs</Filter>
     </ClInclude>
   </ItemGroup>

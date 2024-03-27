@@ -63,7 +63,7 @@ void bubbleSortPP(int** arr, int len)
 	for (int i = 0; i < len - 1; i++) {
 		for (int j = 0; j < len - i - 1; j++) {
 			if (*arr[j] > *arr[j + 1]) {
-				swap(&arr[j], &arr[j + 1]);
+				swap(arr[j], arr[j + 1]);
 			}
 		}
 	}
@@ -104,7 +104,7 @@ int enumSearch(int arr[], int len, int key, int* c) {
 
 void shellSortKnutDec(int arr[], int len, int* m, int* c) {
 	int max = (log2(len)) - 1;
-	int* hArr = malloc(max * sizeof(int));
+	int* hArr = (int*)malloc(max * sizeof(int));
 	hArr[0] = 1;
 	for (int i = 1; i < max; i++) hArr[i] = 2 * hArr[i - 1] + 1;
 

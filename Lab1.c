@@ -1,7 +1,4 @@
-
-#include <stdio.h>
-#include <math.h>
-#include "corecrt_math_defines.h"
+#include "Lab1.h"
 
 /// <summary>
 /// Печатает дату пасхи в указанном году
