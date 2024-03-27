@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include <string>
+#include <locale>
 
 #include "ArrayUtils.h"
 
@@ -16,6 +16,8 @@
 #include "Lab7.h" // 
 #include "Lab8.h" // 
 
+using namespace std;
+
 #define N 20
 #define N100 100
 #define N1000 1000
@@ -24,6 +26,7 @@ void lab7();
 void lab8();
 
 void main() {
+	setlocale(LC_ALL, "Rus");
 	lab8();
 }
 
@@ -70,5 +73,31 @@ void lab7() {
 }
 
 void lab8() {
-	
+	School schools[] = {
+		{1, 100, 1},
+		{2, 85, 80},
+		{3, 30, 4},
+		{4, 70, 10},
+		{5, 150, 30},
+		{6, 150, 30},
+		{7, 200, 40}
+	};
+
+	Room rooms[] = {
+		{1, 21.3, "Факультет 1", 2},
+		{2, 20.2, "Факультет 2", 3},
+		{3, 21.5, "Факультет 2", 4},
+		{4, 20.3, "Факультет 3", 2},
+		{5, 31.0, "Факультет 1", 3},
+		{6, 21.4, "Факультет 3", 2},
+		{7, 22.0, "Факультет 1", 3},
+		{8, 21.6, "Факультет 4", 2},
+	};
+
+	int sn = sizeof(schools) / sizeof(schools[0]);
+	int rn = sizeof(rooms) / sizeof(rooms[0]);
+
+	printSchoolData(schools, sn);
+	cout << "-----------" << endl << endl;
+	printRoomData(rooms, rn);
 }

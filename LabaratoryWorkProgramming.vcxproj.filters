@@ -25,9 +25,12 @@
     <Filter Include="Файлы заголовков\Utils">
       <UniqueIdentifier>{71ada9ff-36dc-4d73-a1b2-863a87c8e3ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Data">
+      <UniqueIdentifier>{35864e19-4098-499e-87bf-4197436b08fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.c">
+    <ClCompile Include="Main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Lab1.c">
@@ -60,6 +63,9 @@
     <ClCompile Include="Lab8.cpp">
       <Filter>Исходные файлы\Labs</Filter>
     </ClCompile>
+    <ClCompile Include="Room.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1.h">
@@ -91,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Lab8.h">
       <Filter>Файлы заголовков\Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="School.h">
+      <Filter>Файлы заголовков\Data</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
