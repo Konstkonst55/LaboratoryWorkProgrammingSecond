@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="ArrayUtils.c" />
     <ClCompile Include="Lab10.cpp" />
+    <ClCompile Include="Lab11.cpp" />
+    <ClCompile Include="Lab12.cpp" />
     <ClCompile Include="Lab7.c" />
     <ClCompile Include="Lab1.c" />
     <ClCompile Include="Lab2.c" />
@@ -37,6 +39,8 @@
     <ClInclude Include="ArrayUtils.h" />
     <ClInclude Include="Lab1.h" />
     <ClInclude Include="Lab10.h" />
+    <ClInclude Include="Lab11.h" />
+    <ClInclude Include="Lab12.h" />
     <ClInclude Include="Lab2.h" />
     <ClInclude Include="Lab3.h" />
     <ClInclude Include="Lab4.h" />
@@ -45,6 +49,7 @@
     <ClInclude Include="Lab7.h" />
     <ClInclude Include="Lab8.h" />
     <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="Passenger.h" />
     <ClInclude Include="School.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -136,10 +141,15 @@
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>D:\SibSUTIS\Course 1\Programming\2\Laboratory work\Code\StaticLibSorts\x64\Debug\SortingLib.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

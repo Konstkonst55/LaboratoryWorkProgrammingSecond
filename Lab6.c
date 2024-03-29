@@ -5,7 +5,7 @@ int calculateTriangleProperties(float a, float b, float c, float* perimeter, flo
 
     float s = (a + b + c) / 2;
 
-    *area = sqrt(s * (s - a) * (s - b) * (s - c));
+    *area = sqrt(double(s * (s - a) * (s - b) * (s - c)));
     *perimeter = a + b + c;
 
     return 1;
@@ -19,4 +19,6 @@ int calculateProbability(int n, int m, double* probGirls, double* probBoys) {
 
     *probGirls = cnm * pow(p, m) * pow(q, n - m);
     *probBoys = cnm * pow(q, m) * pow(p, n - m);
+
+    return 1;
 }

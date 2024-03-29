@@ -69,6 +69,12 @@
     <ClCompile Include="Lab10.cpp">
       <Filter>Исходные файлы\Labs</Filter>
     </ClCompile>
+    <ClCompile Include="Lab11.cpp">
+      <Filter>Исходные файлы\Labs</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab12.cpp">
+      <Filter>Исходные файлы\Labs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1.h">
@@ -105,6 +111,15 @@
       <Filter>Файлы заголовков\Data</Filter>
     </ClInclude>
     <ClInclude Include="Lab10.h">
+      <Filter>Файлы заголовков\Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Passenger.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab11.h">
+      <Filter>Файлы заголовков\Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab12.h">
       <Filter>Файлы заголовков\Labs</Filter>
     </ClInclude>
   </ItemGroup>

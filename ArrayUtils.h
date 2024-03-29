@@ -4,7 +4,9 @@
 #define ARRAY_UTILS_H
 
 void fillRandIntVector(int arr[], int len, int min, int max);
+void fillRandFloatVector(float arr[], int len, float min, float max);
 void printVector(int arr[], int len);
+void printFloatVector(float arr[], int len);
 void printIntMatrixWithSelectedElement(int** arr, int rows, int cols, const int sRow, const int sCol);
 void printIntMatrixWithSelectedRowCol(int** arr, int rows, int cols, const int sRow, const int sCol);
 

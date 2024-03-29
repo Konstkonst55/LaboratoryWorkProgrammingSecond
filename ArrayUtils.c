@@ -6,13 +6,24 @@
 #include <time.h>
 
 void fillRandIntVector(int arr[], int len, int min, int max) {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	for (int i = 0; i < len; i++) arr[i] = getRandomInt(min, max);
+}
+
+void fillRandFloatVector(float arr[], int len, float min, float max) {
+	srand((unsigned int)time(NULL));
+	for (int i = 0; i < len; i++) arr[i] = getRandomFloat(min, max);
 }
 
 void printVector(int arr[], int len) {
 	printf("\n");
 	for (int i = 0; i < len; i++) printf("[%d] ", arr[i]);
+	printf("\n");
+}
+
+void printFloatVector(float arr[], int len) {
+	printf("\n");
+	for (int i = 0; i < len; i++) printf("[%.2f] ", arr[i]);
 	printf("\n");
 }
 
@@ -103,7 +114,7 @@ int enumSearch(int arr[], int len, int key, int* c) {
 }
 
 void shellSortKnutDec(int arr[], int len, int* m, int* c) {
-	int max = (log2(len)) - 1;
+	int max = (int)log2(len) - 1;
 	int* hArr = (int*)malloc(max * sizeof(int));
 	hArr[0] = 1;
 	for (int i = 1; i < max; i++) hArr[i] = 2 * hArr[i - 1] + 1;
@@ -141,7 +152,7 @@ void printIntMatrix(int** arr, int rows, int cols) {
 }
 
 void fillRandIntMatrix(int** arr, int rows, int cols, int min, int max) {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
 			arr[i][j] = getRandomInt(min, max);
