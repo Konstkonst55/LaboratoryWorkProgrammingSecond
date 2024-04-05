@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LaboratoryWorkProgramming", "LabaratoryWorkProgramming.vcxproj", "{416AC3AB-CEE3-49FF-862B-6D9BEDDC6863}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortingLib", "..\SortingLib\SortingLib.vcxproj", "{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{416AC3AB-CEE3-49FF-862B-6D9BEDDC6863}.Release|x64.Build.0 = Release|x64
 		{416AC3AB-CEE3-49FF-862B-6D9BEDDC6863}.Release|x86.ActiveCfg = Release|Win32
 		{416AC3AB-CEE3-49FF-862B-6D9BEDDC6863}.Release|x86.Build.0 = Release|Win32
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Debug|x64.ActiveCfg = Debug|x64
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Debug|x64.Build.0 = Debug|x64
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Debug|x86.ActiveCfg = Debug|Win32
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Debug|x86.Build.0 = Debug|Win32
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Release|x64.ActiveCfg = Release|x64
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Release|x64.Build.0 = Release|x64
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Release|x86.ActiveCfg = Release|Win32
+		{C3230A9B-B3CE-4E7B-BD39-D88123DE2828}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

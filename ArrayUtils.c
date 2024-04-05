@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 #include "ArrayUtils.h"
-#include "MathUtils.h"
-#include <time.h>
 
 void fillRandIntVector(int arr[], int len, int min, int max) {
 	srand((unsigned int)time(NULL));

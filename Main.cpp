@@ -5,6 +5,7 @@
 #include <string>
 #include <locale>
 #include <cstdlib>
+#include <Windows.h>
 
 #include "ArrayUtils.h"
 
@@ -14,10 +15,12 @@
 #include "Lab4.h"	// ✔
 #include "Lab5.h"	// ✔
 #include "Lab6.h"	// ✔
-#include "Lab7.h"	// 
-#include "Lab8.h"	// 
-
+#include "Lab7.h"	// ✔
+#include "Lab8.h"	// ✔
+#include "Lab9.h"	// 
 #include "Lab10.h"	// 
+#include "Lab11.h"	// 
+#include "Lab12.h"	// 
 
 using namespace std;
 
@@ -27,11 +30,17 @@ using namespace std;
 
 void lab7();
 void lab8();
+void lab9();
 void lab10();
+void lab11();
+void lab12();
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	lab10();
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+
+	lab9();
 }
 
 void lab7() {
@@ -106,6 +115,81 @@ void lab8() {
 	printRoomData(rooms, rn);
 }
 
+void lab9() {
+	SLLStudents lStudents;
+	vector<Student> students;
+	vector<string> surnames = { "Иванов", "Архипов", "Сергеев", "Яковлев", "Сергеев" };
+
+	cout << "Односвязные студенты:" << endl << endl;
+
+	for (auto surname : surnames) {
+		Student student;
+		student.surname = surname;
+		fillRandIntVector(student.grades, 4, 1, 5);
+		this_thread::sleep_for(chrono::seconds(1));
+		lStudents.addStudent(student);
+	}
+
+	lStudents.print();
+	lStudents.sort();
+	lStudents.print();
+
+	cout << "Двусвязные студенты:" << endl << endl;
+
+	DLLStudents dlStudents;
+
+	for (auto surname : surnames) {
+		Student student;
+		student.surname = surname;
+		fillRandIntVector(student.grades, 4, 2, 5);
+		this_thread::sleep_for(chrono::seconds(1));
+		dlStudents.addStudent(student);
+	}
+
+	dlStudents.print();
+	dlStudents.removeStudents();
+	dlStudents.print();
+
+	cout << "Дерево из студентов:" << endl << endl;
+
+	BinaryTree btStudents;
+
+	for (auto surname : surnames) {
+		Student student;
+		student.surname = surname;
+		fillRandIntVector(student.grades, 4, 2, 5);
+		this_thread::sleep_for(chrono::seconds(1));
+		btStudents.addStudent(student);
+	}
+
+	btStudents.print(); cout << endl;
+	btStudents.print(false); cout << endl;
+	btStudents.print(); cout << endl;
+
+	string searchKey;
+	cout << "Введите фамилию: "; cin >> searchKey;
+
+	TreeNode* found = btStudents.find(searchKey);
+
+	if (found) {
+		cout << "Вот он: " << found->student.surname << " ";
+		for (int i = 0; i < 4; i++) cout << "[" << found->student.grades[i] << "] ";
+		cout << endl;
+	}
+	else {
+		cout << "Такого нет" << endl;
+	}
+}
+
 void lab10() {
 	sortWordFile();
+}
+
+void lab11() {
+	string filename = "11_pasenngersdata.bin";
+	runPassengerFileManager(filename);
+}
+
+void lab12() {
+	runSorting();
 }

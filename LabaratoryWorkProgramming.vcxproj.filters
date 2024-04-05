@@ -75,6 +75,9 @@
     <ClCompile Include="Lab12.cpp">
       <Filter>Исходные файлы\Labs</Filter>
     </ClCompile>
+    <ClCompile Include="Lab9.cpp">
+      <Filter>Исходные файлы\Labs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1.h">
@@ -121,6 +124,15 @@
     </ClInclude>
     <ClInclude Include="Lab12.h">
       <Filter>Файлы заголовков\Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab9.h">
+      <Filter>Файлы заголовков\Labs</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Файлы заголовков\Data</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

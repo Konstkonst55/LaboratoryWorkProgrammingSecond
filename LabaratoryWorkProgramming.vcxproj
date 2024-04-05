@@ -31,6 +31,7 @@
     <ClCompile Include="Lab5.c" />
     <ClCompile Include="Lab6.c" />
     <ClCompile Include="Lab8.cpp" />
+    <ClCompile Include="Lab9.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MathUtils.c" />
     <ClCompile Include="Room.h" />
@@ -48,9 +49,17 @@
     <ClInclude Include="Lab6.h" />
     <ClInclude Include="Lab7.h" />
     <ClInclude Include="Lab8.h" />
+    <ClInclude Include="Lab9.h" />
     <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Passenger.h" />
     <ClInclude Include="School.h" />
+    <ClInclude Include="Student.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SortingLib\SortingLib.vcxproj">
+      <Project>{c3230a9b-b3ce-4e7b-bd39-d88123de2828}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -139,18 +148,25 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <CompileAs>CompileAsCpp</CompileAs>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\SibSUTIS\Course 1\Programming\2\Laboratory work\Code\SortingLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <UseFullPaths>true</UseFullPaths>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>D:\SibSUTIS\Course 1\Programming\2\Laboratory work\Code\StaticLibSorts\x64\Debug\SortingLib.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\SibSUTIS\Course 1\Programming\2\Laboratory work\Code\LaboratoryWorkProgramming\x64\Debug\SortingLib.lib</AdditionalDependencies>
     </Link>
+    <Xdcmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+    </Xdcmake>
+    <Xdcmake>
+      <DocumentLibraryDependencies>true</DocumentLibraryDependencies>
+    </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

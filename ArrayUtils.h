@@ -3,6 +3,9 @@
 #ifndef ARRAY_UTILS_H
 #define ARRAY_UTILS_H
 
+#include "MathUtils.h"
+#include <stdio.h>
+
 void fillRandIntVector(int arr[], int len, int min, int max);
 void fillRandFloatVector(float arr[], int len, float min, float max);
 void printVector(int arr[], int len);
