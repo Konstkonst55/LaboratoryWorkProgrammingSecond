@@ -16,11 +16,36 @@ void showMenu(int& choice) {
         << "0. Выход" << endl << endl
         << "Выберите действие: ";
     cin >> choice;
+    cout << endl;
     cin.ignore();
 }
 
+template<typename T>
+T getNumInput(const string& message) {
+    T n;
+    bool validInput = false;
+
+    while (!validInput) {
+        cout << message;
+        cin >> n;
+
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cerr << endl << "Неверный ввод. Пожалуйста, введите число" << endl << endl;
+        }
+        else {
+            validInput = true;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    }
+
+    return n;
+}
+
 void addRecord(const string filename) {
-    ofstream file(filename, ios::binary);
+    ofstream file(filename, ios::binary | ios::app);
 
     if (!file) {
         cerr << endl << "Не удалось открыть файл для записи" << endl << endl;
@@ -30,27 +55,22 @@ void addRecord(const string filename) {
     Passenger passenger;
 
     cout << "Введите ФИО пассажира: ";
-    cin.ignore();
-    cin.getline(passenger.fullName, sizeof(passenger.fullName)); // todo
+    cin.getline(passenger.fullName, 100);
 
-    cout << "Введите количество занимаемых багажом мест: ";
-    cin >> passenger.baggageCount;
+    passenger.baggageCount = getNumInput<int>("Введите количество занимаемых багажом мест: ");
 
-    cout << "Введите общий вес вещей: ";
-    cin >> passenger.weight;
-    cout << endl;
-    cin.ignore();
+    passenger.weight = getNumInput<float>("Введите общий вес вещей: ");
 
-    file.write(reinterpret_cast<char*>(&passenger), sizeof(Passenger));
+    file.write(reinterpret_cast<const char*>(&passenger), sizeof(Passenger));
 
     file.close();
 }
 
 void createFile(const string filename, int recordNum) {
-    ofstream file(filename, ios::binary);
+    ofstream file(filename, ios::binary | ios::trunc);
 
     if (!file) {
-        cerr << endl << "Не удалось открыть файл для записи" << endl << endl;
+        cerr << endl << "Не удалось создать файл для записи" << endl << endl;
         return;
     }
 
@@ -69,9 +89,9 @@ void viewFile(const string filename) {
 
     Passenger passenger;
     while (file.read(reinterpret_cast<char*>(&passenger), sizeof(Passenger))) {
-        cout << "ФИО: " << passenger.fullName << endl
+        cout << "\033[32mФИО: " << passenger.fullName << endl
             << "Количество занимаемых багажом мест: " << passenger.baggageCount << endl
-            << "Общий вес вещей: " << passenger.weight << endl << endl;
+            << "Общий вес вещей: " << passenger.weight << "\033[0m" << endl << endl;
     }
 
     file.close();
@@ -123,8 +143,8 @@ void updateWeight(const string filename, const string surname, const float newWe
 
     fs.close();
 
-    if (found) cout << "Вес вещей пассажира успешно изменен" << endl;
-    else cout << "Пассажир с такой фамилией не найден" << endl;
+    if (found) cout << endl << "Вес вещей пассажира успешно изменен" << endl << endl;
+    else cout << endl << "Пассажир с такой фамилией не найден" << endl << endl;
 }
 
 void runPassengerFileManager(string& filename) {
@@ -136,11 +156,7 @@ void runPassengerFileManager(string& filename) {
 
         switch (choice) {
             case 1: {
-                int N;
-                cout << endl << "Введите количество записей: ";
-                cin >> N;
-                cin.ignore();
-                createFile(filename, N);
+                createFile(filename, getNumInput<int>("Введите количество записей: "));
                 break;
             }
 
@@ -160,12 +176,19 @@ void runPassengerFileManager(string& filename) {
             }
 
             case 5: {
+                string surname;
+                float newWeight;
+                cout << "Введите фамилию: ";
+                cin >> surname;
+                cin.ignore();
+                newWeight = getNumInput<float>("Введите новый вес: ");
 
+                updateWeight(filename, surname, newWeight);
                 break;
             }
 
             case 0: break;
-            default: cerr << endl << "Неверный выбор. Попробуйте снова" << endl << endl;
+            default: cerr << "Неверный выбор. Попробуйте снова" << endl << endl;
         }
     } while (choice != 0);
 }

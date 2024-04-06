@@ -40,7 +40,7 @@ int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 
-	lab9();
+	lab11();
 }
 
 void lab7() {
