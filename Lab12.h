@@ -14,6 +14,6 @@ using namespace std;
 using namespace SortingLib;
 using namespace chrono;
 
-void runSorting();
+void runSorting(const int n);
 
 #endif // !LAB12_H

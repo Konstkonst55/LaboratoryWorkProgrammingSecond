@@ -2,8 +2,8 @@
 
 template <typename T> double getSortTime(sortType<T>, T[], const int, comparatorType<T>);
 
-void runSorting() {
-	const int n = 20000, border = n * 2;
+void runSorting(const int n) {
+	const int border = n * 2;
 	int* arrInt = new int[n];
 	float* arrFloat = new float[n];
 
